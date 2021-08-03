@@ -12,32 +12,32 @@
   <body class="kitsunebg">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://localhost:3000"><img src="/images/logo.png" style="height : 60px"></a>
+        <a class="navbar-brand" href="/"><img src="/images/logo.png" style="height : 60px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="http://localhost:3000">HOME</a>
+            <a class="nav-link text-white" href="/">HOME</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="http://localhost:3000/categorias">PRODUCTOS</a>
+            <a class="nav-link text-white" href="/categorias">PRODUCTOS</a>
           </li>
           <li class="nav-item dropdown mx-3">
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               USUARIOS
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="http://localhost:3000/login">Log-in</a></li>
-              <li><a class="dropdown-item" href="http://localhost:3000/registro">Registro</a></li>
+              <li><a class="dropdown-item" href="/login">Log-in</a></li>
+              <li><a class="dropdown-item" href="/registro">Registro</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="http://localhost:3000/admin">Admin</a></li>
+              <li><a class="dropdown-item" href="/admin">Admin</a></li>
             </ul>
           </li>
         </ul>
       </div>
-      <a class="nav-link" href="http://localhost:3000/carrito"><button class="btn btn-outline-success mx-3" type="submit"><i class="fas fa-shopping-cart"></i></button></a>
+      <a class="nav-link" href="/carrito"><button class="btn btn-outline-success mx-3" type="submit"><i class="fas fa-shopping-cart"></i></button></a>
       <form action="/productos" method="post" class="d-flex">
         <div class="form-group">
           <input class="form-control me-2" type="text" placeholder="BUSCAR PRODUCTOS" name="busq" aria-label="Search">
