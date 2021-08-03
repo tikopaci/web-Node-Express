@@ -1,0 +1,37 @@
+<div class="container-fluid bg-dark fill">
+    <div class="row justify-content-center">
+        <div class="col-7 bg-light mt-5">
+            <form method="post" action="/admin/productos/create" enctype="multipart/form-data">
+                <div class="mb-3 mt-3">
+                    <label for="nombre" class="form-label">Nombre de Producto:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre producto">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="categoria" class="form-label">Categoría:<span class="text-danger">*</span></label>
+                    <select class="form-select" id="id_categoria" name="id_categoria">
+                        {{#each categorias}}
+                        <option value="{{id}}">{{nombre}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="descripcion" class="form-label">Descripción:</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Describa el producto">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="stock" class="form-label">Stock:<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="stock" name="stock" placeholder="Ingrese cantidad de stock">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="precio" class="form-label">Precio:<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="precio" name="precio" placeholder="Ingrese precio del producto">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="imagen" class="form-label">Agregar imagen<span class="text-danger">*</span></label>
+                    <input type="file" class="form-control" name="imagen" id="imagen">
+                </div>
+                <button type="submit" class="btn btn-danger text-center mb-3">Crear producto</button>
+            </form>
+        </div>
+    </div>
+</div>

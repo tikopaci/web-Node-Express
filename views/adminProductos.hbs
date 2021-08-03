@@ -1,0 +1,25 @@
+<div class="container-fluid bg-dark fill">
+    <a href="/admin/productos/create" class="btn btn-danger mt-4 mb-4">Agregar producto</a>
+    <table class="table text-white">
+        <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Stock</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each productos}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>{{nombreCategoria}}</td>
+            <td>{{stock}}</td>
+            <td>${{precio}}</td>
+            <td><img src="/images/{{imagenProducto}}" alt="imagen de producto" style="height : 100px"></td>
+            <td><a href="/admin/productos/update/{{id}}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a></td>
+            <td><a href="/admin/productos/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

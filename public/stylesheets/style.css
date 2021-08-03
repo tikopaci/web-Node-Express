@@ -1,0 +1,64 @@
+a {
+  color: #00B7FF;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+  font-size: 3.5rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.kitsunebg {
+  background-image: url(/images/fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 90%;
+  font-family: 'Oswald', serif;    
+}
+
+.carr-text {
+  color: rgb(206, 82, 255);
+  font-weight: bolder;
+}
+
+.btn-danger {
+  background-color: rgb(192, 0, 64) !important
+}
+
+.btn-success {
+  background-color: rgba(10, 255, 83, 0.897) !important
+}
+
+.btn-info {
+  background-color: rgba(5, 179, 170, 0.925) !important
+}
+
+.bg-dark-light {
+  background-color: #2125299f !important;
+  opacity: 60% !important;
+}
+
+.fill { 
+  min-height: 90vh;
+  height: 100%;
+}

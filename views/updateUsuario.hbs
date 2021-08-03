@@ -1,0 +1,21 @@
+<div class="container-fluid bg-dark fill m-0">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-7 bg-light mt-5">
+            <form method="post" action="/admin/usuarios/update/{{usuario.id}}">
+                <div class="form-group mt-3">
+                    <label for="username" class="form-label">Modificar Username:</label>
+                    <input type="text" name="username" class="form-control" placeholder="{{usuario.username}}" id="username">
+                </div>
+                <div class="mt-3 mb-1">
+                    <label for="mail" class="form-label">Modificar Email:</label>
+                    <input type="email" class="form-control" name="mail" placeholder="{{usuario.mail}}" id="mail">
+                </div>
+                <div class="mb-3 mt-3 d-grid gap-2">
+                    <button type="submit" class="btn btn-danger btn-block">Modificar datos</button>
+                </div>
+            </form>           
+            <a href="/admin/usuarios/auth/{{usuario.id}}" class="btn btn-warning btn-block mt-1 mb-1">Habilitar Usuario</a></td>
+            <a href="/admin/usuarios/adm/{{usuario.id}}" class="btn btn-danger btn-block mt-1 mb-1">Hacer Admin</a></td>
+        </div>
+    </div>
+</div>

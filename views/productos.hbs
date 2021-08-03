@@ -1,0 +1,32 @@
+<div class="container-fluid bg-dark fill">
+    <table class="table text-white bg-dark">
+        <thead>
+            <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Precio</th>
+            <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each productos}}
+            <tr>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td>{{stock}}</td>
+            <td>${{precio}}</td>
+            <td><img src="/images/{{imagenProducto}}" alt="imagen de producto" style="height : 100px"></td>
+            <td><a href="/productos/single/{{id}}" class="btn btn-light">Ver mas <i class="fas fa-eye"></i></a></td>
+            <td><a href="/productos/buy/{{id}}" class="btn btn-success">Comprar<i class="fas fa-shopping-cart"></i>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="mb-2 mt-2">
+        <span class="text-danger">{{message}}</span>
+    </div>
+    <div class="container d-block text-center">
+        <a href="/categorias" class="btn btn-danger mx-2 mt-2 mb-2">Volver a las categorías</a>
+    </div>
+</div>

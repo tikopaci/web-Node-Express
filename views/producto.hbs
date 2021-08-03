@@ -1,0 +1,16 @@
+<div class="container-fluid bg-dark fill">
+    <div class="row justify-content-center">
+        <div class="card mt-5" style="width: 30rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{producto.nombre}}</h5>
+                <img src="/images/{{producto.imagenProducto}}" class="card-img-top mt-2 mb-2" alt="imagen de producto">
+                <p class="card-text">Descripción: {{producto.descripcion}}</p>
+                <p class="card-text">Precio: ${{producto.precio}}</p>
+                <p class="card-text">Stock: {{producto.stock}}</p>
+                <p class="card-text">Categoria: {{producto.nombreCategoria}}</p>
+                <a href="/productos/buy/{{producto.id}}" class="btn btn-success mt-2">Comprar <i class="fas fa-shopping-cart"></i>
+                <a href="/productos/{{producto.id_categoria}}" class="btn btn-danger mx-2 mt-2">Volver a los productos</a>
+            </div>
+        </div>
+    </div>
+</div>

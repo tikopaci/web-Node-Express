@@ -1,0 +1,14 @@
+<div class="container-fluid bg-dark fill">
+    <div class="row justify-content-center">
+        {{#each categorias}}
+        <div class="card mt-5 mx-5 bg-dark" style="width: 17rem;">
+            <img src="/images/categorias/{{id}}.png" class="card-img-top mt-2 mb-2" alt="imagen de caregorias">
+            <div class="card-body text-center">
+                <h5 class="card-title text-white">{{nombre}}</h5>
+                <p class="card-text text-white">{{descripcion}}</p>
+                <a href="/productos/{{id}}" class="btn btn-danger text-center">Ver productos</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

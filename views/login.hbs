@@ -1,0 +1,23 @@
+<div class="container-fluid bg-dark m-0 fill">
+    <div class="row justify-content-center" style="height : 100vh">
+        <div class="col-7 text-light mt-3">
+            <form method="post" action="/login">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Contraseña<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="pass" id="pass">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-danger mt-2">Iniciar sesion</button>
+                </div>
+                <div class="d-grid gap-2 mt-1">
+                    <a href="http://localhost:3000/registro" class="btn btn-danger mt-1">Registrarse</a>
+                </div>
+            </form>
+            <p class="text-danger text-center mt-3">{{message}}</p>
+        </div>
+    </div>
+</div>

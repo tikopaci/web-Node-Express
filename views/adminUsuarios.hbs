@@ -1,0 +1,27 @@
+<div class="container-fluid bg-dark fill">
+    <div class="row d-flex justify-content-center">
+        <div class="col-5">
+            <form action="/admin/usuarios" method="post">
+                <div class="form-group mt-3">
+                    <input type="text" name="busq" placeholder="Ingrese nombre de usuario" class="form-control">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-info mt-3">Buscar usuario</button>
+                </div>
+            </form>
+            <div class="d-flex justify-content-center">
+                <div class="card mt-5 bg-light" style="width: 17rem;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title text-warning">{{usuario.username}}</h3>
+                        <h5 class="card-text text-warning">{{usuario.mail}}</h5>
+                        <a href="/admin/usuarios/update/{{usuario.id}}" class="btn btn-warning"><i class="fas fa-edit"></i> Editar</a>
+                        <a href="/admin/usuarios/del/{{usuario.id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</a></td>
+                        <div class="mb-2 mt-2">
+                            <span class="text-danger">{{message}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
