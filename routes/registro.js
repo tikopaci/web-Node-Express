@@ -24,7 +24,7 @@ const create = async(req, res) => {
     const usuariosExistentes = await model.getAll();
     usuariosExistentes.forEach(usuario => {
         if (usuario.username == finalUser.username || usuario.mail == finalUser.mail) duplicado = true;
-    })
+    });
     if (!duplicado) {
         const added = await model.create(finalUser); // Lo agrego a la base de datos con mi model
         console.log(added);
@@ -34,7 +34,7 @@ const create = async(req, res) => {
             `<h2>${finalUser.username}, gracias por registrarse en Twisted Kitsune</h2>
             <h3>Para activar su cuenta, por favor haz click <a href=${process.env.URL_SERVER}:${process.env.PORT}/registro/verify/${uid}>AQUI</a></h3>`
         });
-        res.render('login', {message : "Revisa tu casilla de correo para confirmar tu registro!"});
+        res.render('login', {message});
     }
     else {
         res.render('registro', {message : "El nombre de usuario y/o mail ingresados ya existen"})
