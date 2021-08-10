@@ -9,21 +9,20 @@ const showLogin = (req, res) => res.render('login', {message: ''});
 const login = async(req, res) => {
     let {username, pass} = req.body;
     pass = sha1(pass);
-    const logged = await auth(username, pass);
+    const [logged] = await auth(username, pass);
     console.log(logged);
-    if (logged.length === 0) {
+    if (!logged) {
         res.render('login', {message: 'Usuario o contraseña incorrectos'});
     }
+    else if (logged.habilitado === 0) {
+        res.render( 'login', {message: "Primero tienes que habilitar tu cuenta, revisa tu mail!"})
+    }
     else {
-        const [{id, admin}] = logged;
+        const {id, admin} = logged;
         req.session.user = id;
         req.session.admin = admin;
-        if (admin == 1) {
-            res.redirect('/admin');
-        }
-        else {
-            res.redirect('/index')
-        }
+
+        admin == 1 ? res.redirect('/admin') : res.redirect('/');
     }
 }
 

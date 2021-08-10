@@ -34,7 +34,7 @@ const create = async(req, res) => {
             `<h2>${finalUser.username}, gracias por registrarse en Twisted Kitsune</h2>
             <h3>Para activar su cuenta, por favor haz click <a href=${process.env.URL_SERVER}:${process.env.PORT}/registro/verify/${uid}>AQUI</a></h3>`
         });
-        res.render('login', {message});
+        res.render('login', {message : "Revise su mail para validar su usuario!"});
     }
     else {
         res.render('registro', {message : "El nombre de usuario y/o mail ingresados ya existen"})

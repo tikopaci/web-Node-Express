@@ -10,7 +10,7 @@ const verify = (uid) =>
 
 // Model one liner para logearse
 const auth = async(username, pass) => 
-    pool.query("SELECT * FROM ?? WHERE username = ? AND pass = ? AND habilitado = 1 AND eliminado = 0", [process.env.T_USERS, username, pass]).then(response => response).catch(err => console.error(err))
+    pool.query("SELECT * FROM ?? WHERE username = ? AND pass = ? AND eliminado = 0", [process.env.T_USERS, username, pass]).then(response => response).catch(err => console.error(err))
 
 //GET INFO PERFIL
 const perfil = async(id_user) => {
